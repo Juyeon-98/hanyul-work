@@ -1,0 +1,160 @@
+/*웹폰트 선언*/
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+
+*{margin: 0; padding: 0; box-sizing: border-box;}/*box-sizing = padding, border속성이 사이즈에 영향을 주지 않도록*/
+body{font-family: 'Pretendard', 'noto sans kr', '맑은 고딕', sans-serif; font-size: 16px; color: #333; overflow-x: hidden;}/*문서전체 폰트 세팅*/
+li{list-style: none;}/*ol/ul의 기호를 없앤다*/
+img, video, input{vertical-align: middle;}/*글자, 그림이 섞여져있을 때 그림기준으로 아래쪽정렬이 되도록(공간내에 생기는 세로여백 제거)*/
+a{text-decoration: none;}/*글자링크에 밑줄 제거*/
+html{scroll-behavior: smooth;}/*문서내링크(#앵커 = id) 속성을 적용시 부드럽게 스크롤*/
+.inner{width: 96%; margin: 0 auto;}
+
+
+/* header 영역 */
+header{position: fixed; left: 0; top: 0; width: 100%; height: 100px; line-height: 100px; background: #2e5b39; font-size: 20px; z-index: 9;}
+
+header .inner{position: relative;}
+header .gnb{position: absolute; left: 0; top: 0;}
+header .gnb li{display: inline-block; padding-right: 43px; text-align: center; margin: 0 auto; position: relative;}
+header .gnb li a{color: #fff; padding-bottom: 8px;}
+header .gnb li .bar{position: absolute; left: 0; top: 70px; width: 0%; height: 2px; background: #fff; transition: all 0.7s;}
+header .gnb li:hover .bar{width: 80%;}
+header .icon{position: absolute; right: 0; top: 0;}
+header .icon a{padding-left: 43px; color: #fff;}
+header .logo{position: absolute; left: 44%; top: 0;}
+
+@keyframes fadein01{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+/* 모바일 헤더css */
+.m_header{display: none; position: fixed; left: 0; top: 0; height: 60px; line-height: 60px; width: 100%; font-size: 22px; color: #fff; background: #2e5b39; z-index: 9;}
+.m_header .inner{display: flex; justify-content: space-between; }
+.m_header .inner img{height: 30px;}
+.m_header .inner p{cursor: pointer;}
+
+
+/* header 반응형 */
+
+@media screen and (max-width: 1279px){
+    .inner{width: 100%; padding: 0 40px;}
+    header{display: none;}
+    .m_header{display: block;}
+}
+@media screen and (max-width: 767px){
+	.inner{width: 100%; padding: 0 16px;}
+    .m_header{height: 50px; line-height: 50px; width: 100%; font-size: 20px;}
+    .m_header .inner img{height: 24px;}
+}
+
+
+/* gnb brand 하위메뉴 */
+.sub01{display: none; background: #2e5b39; position: absolute; left: 0px; top: 100px; width: 100%; height: 100px; line-height: 60px; z-index: 9; font-size: 18px;}
+.sub01 a{color: #fff;}
+.sub_left{display: flex;}
+/* gnb line 하위메뉴 */
+.sub02{display: none; background: #2e5b39; position: absolute; left: 0; top: 100px; width: 100%; height: 428px; z-index: 9; font-size: 18px;}
+.sub02 .inner{position: relative;}
+.sub02 a{color: #fff;}
+.sub02 .sub_left{padding: 0 115px;}
+.sub_left ul{padding-right: 80px;}
+.sub_left li{padding: 10px 0;}
+.sub_line{position: absolute; left: 50%; top: 10px; height: 100%; width: 2px; background: #fff;}
+.sub_right{position: absolute; left: 55%; top: 0; padding: 20px 0; width: 30%; height: 100%; overflow: hidden; margin: 0 auto;}
+.sub_right video{width: 100%; height: 100%; object-fit: cover;}
+
+
+
+
+/* footer */
+footer{margin-top: 100px; padding: 60px 0; background: #2e5b39; color: #fff;}
+footer .inner{display: flex; justify-content: space-between;}
+footer .f_logo{padding-bottom: 30px;}
+footer .f_btn{padding: 20px 0;}
+footer .f_btn a{color: #fff;}
+footer .f_right{padding: 30px 0;}
+footer .f_icon a{padding: 0 5px;}
+footer .f_icon img{height: 30px;}
+footer .f_icon{padding-bottom: 30px;}
+footer .f_right p{text-align: end;}
+/* footer 반응형 */
+@media screen and (max-width: 1279px){
+    footer .inner{display: block;}
+    footer .f_logo img{height: 30px;}
+    footer .f_btn{padding: 15px 0; font-size: 15px;}
+    footer .f_ser{font-size: 13px;}
+    footer .copy{font-size: 13px;}
+
+    footer .f_right{padding: 0; display: flex; justify-content: space-between;}
+    footer .f_icon a{padding-left: 0;}
+    footer .f_icon{padding: 20px 0;}
+}
+@media screen and (max-width: 767px){
+    footer{margin-top: 50px; padding: 30px 0;}
+    footer .inner{display: block;}
+    footer .f_logo{padding-bottom: 15px;}
+    footer .f_logo img{height: 18px;}
+    footer .f_btn{font-size: 12px;}
+    footer .f_ser{font-size: 10px;}
+    footer .copy{font-size: 10px;}
+
+    footer .f_icon a{padding-left: 0;}
+    footer .f_icon{padding: 15px 0;}
+    footer .f_icon img{height: 20px;}
+    footer .f_right p img{height: 40px;}
+}
+
+
+
+.up_btn{position: fixed; right: 50px; bottom: 50px; font-size: 28px; background: #2e5b39; padding: 20px; border-radius: 50px; z-index: 8;}
+.up_btn a i{position: sticky; color: #fff; }
+/* up_btn 반응형 */
+@media screen and (max-width: 1279px){
+    .up_btn{right: 30px; bottom: 30px; font-size: 24px; padding: 15px;}
+}
+@media screen and (max-width: 767px){
+    .up_btn{right: 15px; bottom: 15px; font-size: 20px; padding: 10px;}
+}
+
+/* 검색버튼 모달 */
+.search{display: none; background: rgba(0,0,0,0.7); position: absolute; left: 0px; top: 0px; width: 100%; height: 100vh; z-index: 10;}
+.search_wrap{background: #2e5b39; height: 50%; position: relative;}
+.search i{font-size: 30px; color: #fff; cursor: pointer;}
+.search_close{position: absolute; right: 40px; top: 0; z-index: 11;}
+.search .inner{text-align: center; padding: 80px 0;}
+.search input{outline: none; border: none; border-bottom: 2px solid #fff; width: 60%; height: 80px; background: #2e5b39; font-size: 20px; color: #fff;}
+.search ::placeholder{font-size: 20px; color: #fff;}
+.search_wrap .inner input::-webkit-search-cancel-button {
+    display: none;
+}
+
+
+
+
+/* 모바일 메뉴 */
+.m_menu{display: none; position: fixed; left: 0; top: 0; height: 100%; width: 100%; background: rgba(0,0,0,0.5); z-index: 10; font-size: 22px; color: #fff;}
+.m_menu_left{width: 90%; height: 100vh; background: #2e5b39; position: relative;}
+.m_menu_h{height: 50px; line-height: 50px; display: flex; justify-content: space-between; border-bottom: 1px solid #fff; padding: 0 2%; position: relative;}
+.m_menu_h img{height: 20px;}
+.m_menu_h .m_close{cursor: pointer;}
+.m_menu_left .m_gnb{padding-top: 20px;}
+.m_menu_left .m_sub p:nth-child(2){width: 30px;}
+.m_menu_left .m_gnb .m_sub a{color: #fff;}
+.m_menu_left .m_gnb .m_sub>a{display: flex; justify-content: space-between; border-bottom: 1px solid #fff; height: 50px; line-height: 50px; font-size: 15px;}
+.m_menu_left .m_gnb .m_sub>ol{display: none; margin-bottom: 20px; }
+.m_menu_left .m_gnb .m_sub>ol>li{padding: 10px 20px; font-size: 13px;}
+.m_store_btn{position: absolute; bottom: 5%; left: 2%; font-size: 15px;}
+.m_store_btn a{color: #fff;}
+
+
+/* 검색버튼 모달 */
+.m_search{display: none; background: rgba(0,0,0,0.7); position: absolute; left: 0px; top: 0px; width: 100%; height: 100vh; z-index: 10;}
+.m_search_wrap{background: #2e5b39; height: 50%; position: relative;}
+.m_search i{font-size: 20px; color: #fff; cursor: pointer;}
+.m_search_close{position: absolute; right: 20px; top: 20px; z-index: 11;}
+.m_search .inner{text-align: center; padding: 80px 0;}
+.m_search input{outline: none; border: none; border-bottom: 2px solid #fff; width: 60%; height: 60px; background: #2e5b39; font-size: 16px; color: #fff;}
+.m_search ::placeholder{font-size: 16px; color: #fff;}
+.m_search_wrap .inner input::-webkit-search-cancel-button {
+    display: none;
+}

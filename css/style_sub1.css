@@ -1,0 +1,67 @@
+h4{font-size: 2rem; font-weight: 500; line-height: 1.5;}
+h5{font-size: 1.25rem; font-weight: 300; line-height: 1.5;}
+span{color: #2e5b39;}
+
+.sec01{padding: 200px 150px 0;}
+.sec01 .inner{display: flex; position: relative;}
+.sec01_img{width: 50%; position: relative;}
+.sec01_img img{width: 100%;}
+.sec01_img::after {content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 1) 100%); pointer-events: none;}
+.sec01_text{position: absolute; left: 47%; top: 5%;}
+.sec01_text h5{padding: 20px 0;}
+
+
+.sec02{padding-top: 150px; padding-left: 55%; position: relative;}
+.sec02 .inner{display: flex;}
+.sec02_text{position: absolute; right: 38%; top: 33%; width: 40%; text-align: left; z-index: 2;}
+.sec02_text h5{padding: 20px 0;}
+.sec02_img{width: 50%; position: relative; z-index: 1;}
+.sec02_img img{width: 100%;}
+.sec02_img::after {content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to left, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 1) 100%); pointer-events: none;}
+
+
+.sec03{padding: 150px 150px 0;}
+.sec03 .inner{display: flex; position: relative;}
+.sec03_img{width: 50%; position: relative;}
+.sec03_img img{width: 100%;}
+.sec03_img::after {content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to right, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 1) 100%); pointer-events: none;}
+.sec03_text{position: absolute; left: 47%; top: 5%;}
+.sec03_text h5{padding: 20px 0;}
+
+
+.sec04{padding-top: 150px; padding-left: 55%; position: relative;}
+.sec04 .inner{display: flex;}
+.sec04_text{position: absolute; right: 42%; top: 33%; width: 40%; text-align: left; z-index: 2;}
+.sec04_text h5{padding: 20px 0;}
+.sec04_img{width: 50%; position: relative; z-index: 1;}
+.sec04_img img{width: 100%;}
+.sec04_img::after {content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to left, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 1) 100%); pointer-events: none;}
+
+@media screen and (max-width: 1279px){
+    h4{font-size: 1.5rem; font-weight: 500; line-height: 1.5;}
+    h5{display: none;}
+    .sec01{padding: 150px 0 0;}
+    .sec01 .inner{display: block;}
+    .sec01_img{width: 100%;}
+    .sec01_img::after{background: none;}
+    .sec01_text{position: absolute; left: 3%; top: -50px; width: 100%;}
+    .sec02{padding-left: 0;}
+    .sec02 .inner{display: block;}
+    .sec02_img{width: 100%;}
+    .sec02_img::after{background: none;}
+    .sec02_text{position: absolute; left: 3%; top: 100px; width: 100%; text-align: left; z-index: 2;}
+    .sec03{padding: 150px 0 0;}
+    .sec03 .inner{display: block;}
+    .sec03_img{width: 100%;}
+    .sec03_img::after{background: none;}
+    .sec03_text{position: absolute; left: 3%; top: -50px;}
+    .sec04{padding-left: 0;}
+    .sec04 .inner{display: block;}
+    .sec04_img{width: 100%;}
+    .sec04_img::after{background: none;}
+    .sec04_text{position: absolute; left: 3%; top: 100px; width: 100%; text-align: left; z-index: 2;}
+}
+@media screen and (max-width: 767px){
+    h4{font-size: 1rem; font-weight: 500; line-height: 1.5;}
+    
+}

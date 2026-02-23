@@ -1,0 +1,16 @@
+.sub2_title{padding: 200px 0 50px; color: #2e5b39; font-size: 30px;}
+.section .inner ul{display: flex; justify-content: space-between; flex-wrap: wrap; background: #efefef; padding: 30px;}
+.section .inner li{width: 24%; padding-bottom: 20px;}
+.section .inner li a{color: #000;}
+.section .inner li img{width: 100%;}
+.section .inner li div{font-size: 18px; padding: 10px 0; white-space: nowrap; text-overflow:ellipsis; overflow: hidden;}
+@media screen and (max-width: 1279px){
+    .section .inner li{width: 49%;}
+    .section .inner li div{font-size: 16px;}
+    .section .inner li p{font-size: 14px;}
+}
+@media screen and (max-width: 767px){
+    .section .inner li{width: 99%;}
+    .section .inner li div{font-size: 14px;}
+    .section .inner li p{font-size: 12px;}
+}

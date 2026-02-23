@@ -1,0 +1,16 @@
+.section{padding-top: 200px;}
+.sub3_title{color: #2e5b39; font-size: 36px; padding-left: 50px;}
+.section .section_wrap{display: flex; justify-content: space-between; padding-top: 50px;}
+.video_list li{padding: 30px 0;}
+.video_img{width: 80%;}
+.video_img img{width: 100%;}
+.video_name{width: 80%; padding: 20px 0;}
+.video_wrap{width: 100%;}
+.video_title{padding-top: 30px; font-size: 30px;}
+.video_date{padding: 10px 0 30px;}
+/* 비디오 크기 자동 조정 */
+.video_wrap iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* 16:9 비율 유지 */
+    height: auto;
+}
